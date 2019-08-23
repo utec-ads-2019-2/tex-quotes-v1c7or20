@@ -6,21 +6,21 @@
 using namespace std;
 
 int main(int argc, char *argv[]) {
-    string cadena;
+    char cadena[100000];
     int control=0;
-    while (cin>>cadena){
-        std::vector<char> cstr(cadena.c_str(), cadena.c_str() + cadena.size() + 1);
-        for (int i = 0; i <= cadena.size(); i++) {
-            if(cstr.at(i)== '"'){
+    while (gets(cadena)){
+        for (int i = 0; i <=strlen(cadena); i++) {
+            if(cadena[i] == '"'){
                 if (control%2==0){
-                    cout<<"``";
+                    printf("``");
                     control++;
                 }else{
-                    cout<<"''";
+                    printf("''");
                     control++;
                 }
-            }else cout<<cstr.at(i);
-        }
+            }else
+                printf("%c",cadena[i]);
+        }printf("\n");
     }
     return 0;
 }
