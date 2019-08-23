@@ -20,7 +20,7 @@ int main(int argc, char *argv[]) {
                 }
             }else
                 printf("%c",cadena[i]);
-        }printf("\n");
+        }cout<<" "<<endl;
     }
     return 0;
 }
